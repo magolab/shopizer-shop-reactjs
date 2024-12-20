@@ -34,6 +34,8 @@ const LoginRegister = lazy(() => import("./pages/other/LoginRegister"));
 const ForgotPassword = lazy(() => import("./pages/other/ForgotPassword"));
 const ResetPassword = lazy(() => import("./pages/other/ResetPassword"));
 
+const Store = lazy(() => import("./pages/store/Store"));
+
 const Cart = lazy(() => import("./pages/other/Cart"));
 const RecentOrder = lazy(() => import("./pages/other/RecentOrder"));
 const OrderDetails = lazy(() => import("./pages/other/OrderDetails"));
@@ -122,6 +124,11 @@ const App = (props) => {
                 />
 
                 {/* Other pages */}
+
+                <Route
+                    path="/store/:storeCode"
+                    component={Store}
+                />
 
                 <Route
                   path="/contact"
